@@ -1,0 +1,21 @@
+uuid: b1155a90-55aa-444e-bd7c-1cd8a32345af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_description
+    - node.type.ideas
+  module:
+    - text
+id: node.ideas.field_task_description
+field_name: field_task_description
+entity_type: node
+bundle: ideas
+label: 'Task Description'
+description: 'Write down here what is the idea, project, requirements, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

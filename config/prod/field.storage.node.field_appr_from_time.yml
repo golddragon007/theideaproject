@@ -1,0 +1,20 @@
+uuid: da620cc6-e3c0-4b11-b64d-0ea8719f4534
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_appr_from_time
+field_name: field_appr_from_time
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

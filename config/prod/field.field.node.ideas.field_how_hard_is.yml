@@ -1,0 +1,21 @@
+uuid: 1a440e37-15ce-43cd-b4bd-1ea8250d0249
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how_hard_is
+    - node.type.ideas
+  module:
+    - options
+id: node.ideas.field_how_hard_is
+field_name: field_how_hard_is
+entity_type: node
+bundle: ideas
+label: 'How hard is?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

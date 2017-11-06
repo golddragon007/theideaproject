@@ -1,0 +1,29 @@
+uuid: b392b264-bab2-495b-a5ca-bb88decedb82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_idea
+    - node.type.ideas
+    - node.type.project
+id: node.project.field_project_idea
+field_name: field_project_idea
+entity_type: node
+bundle: project
+label: 'Project idea'
+description: 'Which idea do you want to solve?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ideas: ideas
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

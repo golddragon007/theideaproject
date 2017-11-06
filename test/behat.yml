@@ -1,0 +1,23 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      default_session: selenium2
+      base_url: http://theideaproject.dd:8083
+      selenium2:
+        browser: firefox
+        wd_host: http://localhost:4444/wd/hub
+    Drupal\DrupalExtension:
+      blackbox: ~
+    Bex\Behat\ScreenshotExtension:
+      image_drivers:
+        local:
+          screenshot_directory: screenshots
+          clear_screenshot_directory: true  # Enable removing all images before each test run. It is false by default.

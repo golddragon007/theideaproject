@@ -1,0 +1,21 @@
+uuid: 06ac6834-7dbe-465c-b188-82cbe86c7ee2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experience
+    - node.type.ideas
+  module:
+    - options
+id: node.ideas.field_experience
+field_name: field_experience
+entity_type: node
+bundle: ideas
+label: Experience
+description: 'How much experience needs for the project? 1 - nothing, 5 - everything'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

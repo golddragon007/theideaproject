@@ -1,0 +1,33 @@
+uuid: 3dbdd933-de79-4bb1-9ec8-293e208831a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_how_hard_is
+field_name: field_how_hard_is
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Easy
+      label: Easy
+    -
+      value: Medium
+      label: Medium
+    -
+      value: Hard
+      label: Hard
+    -
+      value: Insane
+      label: Insane
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,60 @@
+uuid: 75b7b9d8-b3a5-4cf4-bfa4-1d98e970d695
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ideas.field_appr_from_time
+    - field.field.node.ideas.field_appr_to_time
+    - field.field.node.ideas.field_how_hard_is
+    - field.field.node.ideas.field_lead
+    - field.field.node.ideas.field_task_description
+    - node.type.ideas
+  module:
+    - options
+    - text
+    - user
+id: node.ideas.teaser
+targetEntityType: node
+bundle: ideas
+mode: teaser
+content:
+  field_appr_from_time:
+    type: number_integer
+    weight: 1
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_appr_to_time:
+    type: number_integer
+    weight: 2
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_how_hard_is:
+    type: list_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_lead:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_task_description: true

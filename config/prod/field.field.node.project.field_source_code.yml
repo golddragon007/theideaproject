@@ -1,0 +1,27 @@
+uuid: 5f35b8e0-102e-4d8e-923f-4c0493323a54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_code
+    - node.type.project
+  module:
+    - file
+id: node.project.field_source_code
+field_name: field_source_code
+entity_type: node
+bundle: project
+label: 'Source code'
+description: 'If the project is small, you can update here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'rar zip'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

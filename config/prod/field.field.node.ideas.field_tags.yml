@@ -1,0 +1,29 @@
+uuid: 517fc21d-0a4c-484d-a2f3-96092c60e427
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.ideas
+    - taxonomy.vocabulary.tags_for_tasks
+id: node.ideas.field_tags
+field_name: field_tags
+entity_type: node
+bundle: ideas
+label: Tags
+description: 'Give some technology name, topics name. Like if you want an online bicycle shop: shop, online, php, sell, programming'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags_for_tasks: tags_for_tasks
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
