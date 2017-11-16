@@ -1,21 +1,23 @@
-uuid: 1a440e37-15ce-43cd-b4bd-1ea8250d0249
+uuid: 6eeaaf15-3cc5-4830-baed-fa960dc3d92f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_how_hard_is
+    - field.storage.node.field_difficulty
     - node.type.ideas
   module:
     - options
-id: node.ideas.field_how_hard_is
-field_name: field_how_hard_is
+id: node.ideas.field_difficulty
+field_name: field_difficulty
 entity_type: node
 bundle: ideas
-label: 'How hard is?'
+label: Difficulty
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: medium
 default_value_callback: ''
 settings: {  }
 field_type: list_string

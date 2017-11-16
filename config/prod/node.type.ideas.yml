@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Ideas
+name: Idea
 type: ideas
-description: 'Create new ideas.'
+description: 'Project ideas'
 help: ''
 new_revision: true
 preview_mode: 1

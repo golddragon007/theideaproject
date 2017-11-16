@@ -1,0 +1,33 @@
+uuid: 572f78d3-7d39-4806-86bf-d2fe4cf4a930
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_languages
+    - node.type.ideas
+    - taxonomy.vocabulary.programming_languages
+  content:
+    - 'taxonomy_term:programming_languages:88c43759-42e2-4080-9f0e-c19de718f50e'
+id: node.ideas.field_languages
+field_name: field_languages
+entity_type: node
+bundle: ideas
+label: 'Programming languages'
+description: 'Preferred programming language(s) for future solutions. Use "All" if not applicable.'
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 88c43759-42e2-4080-9f0e-c19de718f50e
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programming_languages: programming_languages
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

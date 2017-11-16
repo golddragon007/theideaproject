@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.ideas.field_appr_from_time
-    - field.field.node.ideas.field_appr_to_time
-    - field.field.node.ideas.field_experience
-    - field.field.node.ideas.field_how_hard_is
+    - field.field.node.ideas.field_difficulty
+    - field.field.node.ideas.field_languages
     - field.field.node.ideas.field_lead
-    - field.field.node.ideas.field_tags
+    - field.field.node.ideas.field_size
     - field.field.node.ideas.field_task_description
+    - field.field.node.ideas.field_technologies
+    - field.field.node.ideas.field_topic
     - node.type.ideas
   module:
     - path
@@ -25,31 +25,20 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_appr_from_time:
-    weight: 1
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_appr_to_time:
-    weight: 2
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_experience:
-    weight: 26
+  field_difficulty:
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_how_hard_is:
-    weight: 3
-    settings: {  }
+  field_languages:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_lead:
     weight: 4
@@ -59,14 +48,12 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_tags:
-    weight: 27
+  field_size:
+    weight: 28
     settings:
-      match_operator: CONTAINS
-      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: number
     region: content
   field_task_description:
     weight: 5
@@ -75,6 +62,24 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_technologies:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_topic:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path

@@ -11,9 +11,9 @@ id: node.ideas.field_task_description
 field_name: field_task_description
 entity_type: node
 bundle: ideas
-label: 'Task Description'
-description: 'Write down here what is the idea, project, requirements, etc.'
-required: false
+label: 'Task description'
+description: 'Introduce the idea, requirements and helpful documents to future builders.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

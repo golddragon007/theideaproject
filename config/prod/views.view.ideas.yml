@@ -3,14 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_appr_from_time
-    - field.storage.node.field_appr_to_time
-    - field.storage.node.field_experience
-    - field.storage.node.field_how_hard_is
+    - field.storage.node.field_difficulty
     - field.storage.node.field_lead
+    - field.storage.node.field_size
     - node.type.ideas
     - system.menu.main
-    - taxonomy.vocabulary.tags_for_tasks
+    - taxonomy.vocabulary.programming_languages
+    - taxonomy.vocabulary.technologies
+    - taxonomy.vocabulary.topics
+  content:
+    - 'taxonomy_term:programming_languages:88c43759-42e2-4080-9f0e-c19de718f50e'
   module:
     - node
     - options
@@ -207,10 +209,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_appr_from_time:
-          id: field_appr_from_time
-          table: node__field_appr_from_time
-          field: field_appr_from_time
+        field_size:
+          id: field_size
+          table: node__field_size
+          field: field_size
           relationship: none
           group_type: group
           admin_label: ''
@@ -271,136 +273,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_appr_to_time:
-          id: field_appr_to_time
-          table: node__field_appr_to_time
-          field: field_appr_to_time
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: entity_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_experience:
-          id: field_experience
-          table: node__field_experience
-          field: field_experience
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: entity_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_how_hard_is:
-          id: field_how_hard_is
-          table: node__field_how_hard_is
-          field: field_how_hard_is
+        field_difficulty:
+          id: field_difficulty
+          table: node__field_difficulty
+          field: field_difficulty
           relationship: none
           group_type: group
           admin_label: ''
@@ -657,11 +533,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_appr_from_time'
-        - 'config:field.storage.node.field_appr_to_time'
-        - 'config:field.storage.node.field_experience'
-        - 'config:field.storage.node.field_how_hard_is'
+        - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_lead'
+        - 'config:field.storage.node.field_size'
   page_latest_ideas:
     display_plugin: page
     id: page_latest_ideas
@@ -682,11 +556,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_appr_from_time'
-        - 'config:field.storage.node.field_appr_to_time'
-        - 'config:field.storage.node.field_experience'
-        - 'config:field.storage.node.field_how_hard_is'
+        - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_lead'
+        - 'config:field.storage.node.field_size'
   page_search_ideas:
     display_plugin: page
     id: page_search_ideas
@@ -718,71 +590,27 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
-        field_appr_from_time_value:
-          id: field_appr_from_time_value
-          table: node__field_appr_from_time
-          field: field_appr_from_time_value
+        field_size_value:
+          id: field_size_value
+          table: node__field_size
+          field: field_size_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: '>='
           value:
             min: ''
             max: ''
-            value: ''
+            value: '0'
           group: 1
           exposed: true
           expose:
-            operator_id: field_appr_from_time_value_op
-            label: 'Appr. from time'
+            operator_id: field_size_value_op
+            label: 'Minimum size (hours)'
             description: ''
-            use_operator: true
-            operator: field_appr_from_time_value_op
-            identifier: field_appr_from_time_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: 'Appr. from time (field_appr_from_time)'
-            description: null
-            identifier: field_appr_from_time_value
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          plugin_id: numeric
-        field_appr_to_time_value:
-          id: field_appr_to_time_value
-          table: node__field_appr_to_time
-          field: field_appr_to_time_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_appr_to_time_value_op
-            label: 'Appr. to time'
-            description: ''
-            use_operator: true
-            operator: field_appr_to_time_value_op
-            identifier: field_appr_to_time_value
+            use_operator: false
+            operator: field_size_value_op
+            identifier: field_size_value
             required: false
             remember: false
             multiple: false
@@ -803,27 +631,69 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
-        field_experience_value:
-          id: field_experience_value
-          table: node__field_experience
-          field: field_experience_value
+        field_size_value_1:
+          id: field_size_value_1
+          table: node__field_size
+          field: field_size_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: '200'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_size_value_1_op
+            label: 'Maximum size (hours)'
+            description: ''
+            use_operator: false
+            operator: field_size_value_1_op
+            identifier: field_size_value_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+        field_difficulty_value:
+          id: field_difficulty_value
+          table: node__field_difficulty
+          field: field_difficulty_value
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
-          value: {  }
+          value:
+            all: all
           group: 1
           exposed: true
           expose:
-            operator_id: field_experience_value_op
-            label: Experience
+            operator_id: field_difficulty_value_op
+            label: Difficulty
             description: ''
-            use_operator: true
-            operator: field_experience_value_op
-            identifier: field_experience_value
+            use_operator: false
+            operator: field_difficulty_value_op
+            identifier: field_difficulty_value
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -843,27 +713,28 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        field_how_hard_is_value:
-          id: field_how_hard_is_value
-          table: node__field_how_hard_is
-          field: field_how_hard_is_value
+        field_languages_target_id:
+          id: field_languages_target_id
+          table: node__field_languages
+          field: field_languages_target_id
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
-          value: {  }
+          value:
+            - 1
           group: 1
           exposed: true
           expose:
-            operator_id: field_how_hard_is_value_op
-            label: 'How hard is?'
+            operator_id: field_languages_target_id_op
+            label: Languages
             description: ''
-            use_operator: true
-            operator: field_how_hard_is_value_op
-            identifier: field_how_hard_is_value
+            use_operator: false
+            operator: field_languages_target_id_op
+            identifier: field_languages_target_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -882,70 +753,120 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
-        field_tags_target_id:
-          id: field_tags_target_id
-          table: node__field_tags
-          field: field_tags_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_tags_target_id_op
-            label: Tags
-            description: ''
-            use_operator: true
-            operator: field_tags_target_id_op
-            identifier: field_tags_target_id
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
+          type: textfield
           limit: true
-          vid: tags_for_tasks
-          hierarchy: true
+          vid: programming_languages
+          hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        field_task_description_value:
-          id: field_task_description_value
-          table: node__field_task_description
-          field: field_task_description_value
+        field_technologies_target_id:
+          id: field_technologies_target_id
+          table: node__field_technologies
+          field: field_technologies_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_technologies_target_id_op
+            label: Technologies
+            description: ''
+            use_operator: false
+            operator: field_technologies_target_id_op
+            identifier: field_technologies_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: technologies
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_topic_target_id:
+          id: field_topic_target_id
+          table: node__field_topic
+          field: field_topic_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_topic_target_id_op
+            label: Topic
+            description: ''
+            use_operator: false
+            operator: field_topic_target_id_op
+            identifier: field_topic_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: topics
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_project_description_value:
+          id: field_project_description_value
+          table: node__field_project_description
+          field: field_project_description_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
           value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_task_description_value_op
-            label: 'Task Description'
+            operator_id: field_project_description_value_op
+            label: 'Project description contains'
             description: ''
-            use_operator: true
-            operator: field_task_description_value_op
-            identifier: field_task_description_value
+            use_operator: false
+            operator: field_project_description_value_op
+            identifier: field_project_description_value
             required: false
             remember: false
             multiple: false
@@ -993,8 +914,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_appr_from_time'
-        - 'config:field.storage.node.field_appr_to_time'
-        - 'config:field.storage.node.field_experience'
-        - 'config:field.storage.node.field_how_hard_is'
+        - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_lead'
+        - 'config:field.storage.node.field_size'

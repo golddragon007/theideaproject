@@ -12,10 +12,13 @@ field_name: field_project_description
 entity_type: node
 bundle: project
 label: 'Project description'
-description: 'Write here what did you do, what was solved, what''s missing, etc.'
+description: 'This is the public description of your solution.'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: "<p><strong>Work in progress</strong></p>\r\n"
+    format: basic_html
 default_value_callback: ''
 settings: {  }
 field_type: text_long

@@ -1,18 +1,18 @@
-uuid: 517fc21d-0a4c-484d-a2f3-96092c60e427
+uuid: b87318e9-80f7-4437-be53-5e787118e351
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags
+    - field.storage.node.field_technologies
     - node.type.ideas
-    - taxonomy.vocabulary.tags_for_tasks
-id: node.ideas.field_tags
-field_name: field_tags
+    - taxonomy.vocabulary.technologies
+id: node.ideas.field_technologies
+field_name: field_technologies
 entity_type: node
 bundle: ideas
-label: Tags
-description: 'Give some technology name, topics name. Like if you want an online bicycle shop: shop, online, php, sell, programming'
-required: true
+label: Technologies
+description: 'The list of technologies the idea involves.'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags_for_tasks: tags_for_tasks
+      technologies: technologies
     sort:
       field: name
       direction: asc

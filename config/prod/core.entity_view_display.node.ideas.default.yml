@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.ideas.field_appr_from_time
-    - field.field.node.ideas.field_appr_to_time
-    - field.field.node.ideas.field_experience
-    - field.field.node.ideas.field_how_hard_is
+    - field.field.node.ideas.field_difficulty
+    - field.field.node.ideas.field_languages
     - field.field.node.ideas.field_lead
-    - field.field.node.ideas.field_tags
+    - field.field.node.ideas.field_size
     - field.field.node.ideas.field_task_description
+    - field.field.node.ideas.field_technologies
+    - field.field.node.ideas.field_topic
     - node.type.ideas
   module:
     - options
@@ -20,61 +20,63 @@ targetEntityType: node
 bundle: ideas
 mode: default
 content:
-  field_appr_from_time:
-    weight: 102
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_appr_to_time:
-    weight: 103
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_experience:
-    weight: 107
+  field_difficulty:
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_how_hard_is:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_lead:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_tags:
-    weight: 108
+  field_languages:
+    weight: 10
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_task_description:
-    weight: 106
+  field_lead:
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  links:
-    weight: 100
+  field_size:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
+  field_task_description:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_technologies:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_topic:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

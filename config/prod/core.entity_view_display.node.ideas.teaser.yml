@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.ideas.field_appr_from_time
-    - field.field.node.ideas.field_appr_to_time
-    - field.field.node.ideas.field_how_hard_is
+    - field.field.node.ideas.field_difficulty
+    - field.field.node.ideas.field_languages
     - field.field.node.ideas.field_lead
+    - field.field.node.ideas.field_size
     - field.field.node.ideas.field_task_description
+    - field.field.node.ideas.field_technologies
+    - field.field.node.ideas.field_topic
     - node.type.ideas
   module:
     - options
@@ -19,40 +21,55 @@ targetEntityType: node
 bundle: ideas
 mode: teaser
 content:
-  field_appr_from_time:
-    type: number_integer
+  field_difficulty:
+    type: list_default
     weight: 1
     region: content
     label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
+    settings: {  }
     third_party_settings: {  }
-  field_appr_to_time:
-    type: number_integer
-    weight: 2
-    region: content
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-  field_how_hard_is:
-    type: list_default
+  field_languages:
+    type: entity_reference_label
     weight: 3
     region: content
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
   field_lead:
     type: text_default
-    weight: 0
+    weight: 2
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-  links:
+  field_size:
+    type: number_integer
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_technologies:
+    type: entity_reference_label
     weight: 4
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_topic:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -12,19 +12,16 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: 'Get started'
-      label: 'Get started'
+      value: planning
+      label: Planning
     -
-      value: 'Under planning'
-      label: 'Under planning'
+      value: development
+      label: Development
     -
-      value: 'Under development'
-      label: 'Under development'
+      value: assessment
+      label: Assessment
     -
-      value: 'In introduction'
-      label: 'In introduction'
-    -
-      value: Finished
+      value: finished
       label: Finished
   allowed_values_function: ''
 module: options

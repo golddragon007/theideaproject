@@ -1,0 +1,9 @@
+uuid: bc74ca6b-845f-4843-bf40-4939954d5464
+langcode: en
+status: true
+dependencies: {  }
+name: 'Programming languages'
+vid: programming_languages
+description: ''
+hierarchy: 0
+weight: 0

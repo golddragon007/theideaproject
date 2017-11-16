@@ -12,7 +12,7 @@ field_name: field_source_code
 entity_type: node
 bundle: project
 label: 'Source code'
-description: 'If the project is small, you can update here.'
+description: 'If your solution is less than a MB, feel free to upload it here.'
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'rar zip'
-  max_filesize: ''
+  max_filesize: 1MB
   description_field: true
   handler: 'default:file'
   handler_settings: {  }

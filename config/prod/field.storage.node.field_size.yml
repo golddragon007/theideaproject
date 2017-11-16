@@ -1,11 +1,11 @@
-uuid: fe25ba02-a0bb-49d4-ac0b-afc034b6b465
+uuid: 0b7e9dcc-0774-4e5d-a17a-88f7ffa76537
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_appr_to_time
-field_name: field_appr_to_time
+id: node.field_size
+field_name: field_size
 entity_type: node
 type: integer
 settings:

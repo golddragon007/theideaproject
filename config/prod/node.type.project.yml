@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Project
 type: project
-description: 'Solved ideas'
+description: 'Idea implementations'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -1,9 +1,0 @@
-uuid: d1268306-87d1-4d60-b5de-25607acac2b7
-langcode: en
-status: true
-dependencies: {  }
-name: 'Tags for tasks'
-vid: tags_for_tasks
-description: 'Use these tags to categorize the tasks'
-hierarchy: 0
-weight: 0

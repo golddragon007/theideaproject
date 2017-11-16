@@ -1,0 +1,22 @@
+uuid: 2638039d-40a3-4caa-a712-eb904d0b89b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programming_languages
+id: taxonomy_term.programming_languages.default
+targetEntityType: taxonomy_term
+bundle: programming_languages
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

@@ -15,4 +15,9 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_project_description: true
+  field_project_idea: true
+  field_source_code: true
+  field_source_code_link: true
+  field_status: true
