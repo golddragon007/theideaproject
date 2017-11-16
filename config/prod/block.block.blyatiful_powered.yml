@@ -1,0 +1,22 @@
+uuid: 5971cf3c-ec30-4b81-b56e-6024a165c090
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blyatiful
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: blyatiful_powered
+theme: blyatiful
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 36c4827c-4f34-4cfd-bf57-50e17c276d08
+langcode: en
+status: true
+dependencies:
+  theme:
+    - blyatiful
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: blyatiful_local_tasks
+theme: blyatiful
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

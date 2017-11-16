@@ -1,0 +1,20 @@
+uuid: ac8e3056-b3c9-4e39-8acb-76fb002fc660
+langcode: en
+status: true
+dependencies:
+  theme:
+    - blyatiful
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: blyatiful_page_title
+theme: blyatiful
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
