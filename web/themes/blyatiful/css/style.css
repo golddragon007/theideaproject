@@ -7422,3 +7422,11 @@ p:last-child,
 .view-filters .form-item select {
   width: 100%;
 }
+.view-filters .form-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: end;
+}
+.view-filters .form-actions button {
+  margin: 0;
+}
