@@ -43,3 +43,18 @@
     clear: both;
   }
 }
+
+.view-filters {
+  .form-item {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: @screen-sm) {
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .input-group, input, select {
+      width: 100%;
+    }
+  }
+}

@@ -7408,3 +7408,17 @@ p:last-child,
   float: none;
   clear: both;
 }
+.view-filters .form-item {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .view-filters .form-item {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+.view-filters .form-item .input-group,
+.view-filters .form-item input,
+.view-filters .form-item select {
+  width: 100%;
+}
