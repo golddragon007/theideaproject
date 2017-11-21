@@ -1,3 +1,4 @@
 #!/bin/bash
 
-lessc less/bootstrap.less css/style.css
+lessc less/style.less css/style.css
+docker-compose exec php sh -c 'cd /var/www/html/web && drush cr'
