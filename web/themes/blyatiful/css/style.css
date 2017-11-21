@@ -7379,3 +7379,32 @@ p:last-child,
 .logo img {
   max-height: 2em;
 }
+.views-row.idea {
+  margin: 1em 0;
+  float: none;
+  clear: both;
+}
+.views-row.idea .views-field {
+  margin-left: 1em;
+}
+.views-row.idea .views-field-title {
+  margin-left: 0;
+  font-size: 1.2em;
+}
+.views-row.idea .views-field-field-lead {
+  font-style: italic;
+  margin-bottom: 0.2em;
+}
+.views-row.idea .views-field-field-size {
+  font-weight: bold;
+  float: left;
+}
+.views-row.idea .views-field-field-difficulty {
+  font-weight: bold;
+  float: left;
+}
+.views-row.idea .views-field-title-1 {
+  font-style: italic;
+  float: none;
+  clear: both;
+}

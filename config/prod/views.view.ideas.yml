@@ -12,7 +12,7 @@ dependencies:
     - taxonomy.vocabulary.technologies
     - taxonomy.vocabulary.topics
   content:
-    - 'taxonomy_term:programming_languages:88c43759-42e2-4080-9f0e-c19de718f50e'
+    - 'taxonomy_term:programming_languages:82a43765-a437-47ec-9464-b99c21a80334'
   module:
     - node
     - options
@@ -79,6 +79,10 @@ display:
             next: ››
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: idea
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -342,7 +346,7 @@ display:
           relationship: reverse__node__field_project_idea
           group_type: count
           admin_label: ''
-          label: 'Projects no. (count)'
+          label: 'Project count'
           exclude: false
           alter:
             alter_text: false
