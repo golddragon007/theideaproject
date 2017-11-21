@@ -36,3 +36,5 @@ web/version.php
 
 # Ignore KDIFF3 files
 *.orig
+
+/init

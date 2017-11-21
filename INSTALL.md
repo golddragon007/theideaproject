@@ -49,7 +49,7 @@ Create also a virtual host for it if your program didn't do that. (like: `TheIde
 After you finished: `cd web`
 5. Install site:  
 `drush si --site-name=TheIdeaProject --site-mail=TheIdeaProject@test.com --account-name=admin --account-pass=123 --db-url=mysql://username:password@localhost/TheIdeaProject standard`  
-**NOTE**: don't forget to change the DB's user, password etc. in this command if needed! 
+**NOTE**: don't forget to change the DB's user, password etc. in this command if needed!
 6. Modify settings.php (add these lines):
     1. `$config_directories['sync'] = '../config/prod';`
     2. `$settings['file_private_path'] = '../private_files';`
@@ -64,42 +64,8 @@ After you finished: `cd web`
 ## Install TheIdeaProject on Linux/Mac with docker
 
 **NOTE**: if your host PC doesn't have PHP7, than you need to run composer commands inside the docker!
-
-### Install drupal
-
-1. Clone repo to your favorite place:  
-`git clone https://github.com/golddragon007/theideaproject.git TheIdeaProject`
-2. Enter the directory: `cd TheIdeaProject`
-3. Get drupal and module files  
-`composer install`
-4. Set correct access and rights (you don't need this on Windows):
-`sudo chgrp 82 . -R`
-Note: 82 is the UID and GID of the www-data user inside the docker container. If your host has this user with the same IDs, then you can replace the numbers with  www-data.
-5. Start the docker container
-`docker-compose up -d`
-6. Enter to docker container
-`docker-compose exec --user 82 php bash`
-7. Create files directories
-`mkdir private_files mkdir web/sites/default/files`
-8. Install site:  
-`cd web`
-`drush si --site-name=TheIdeaProject --site-mail=TheIdeaProject@test.com --account-name=admin --account-pass=123 --db-url=mysql://drupal:drupal@mariadb/drupal standard`
-9. Modify settings.php:
-    1. `chmod 666 sites/default/settings.php`
-    2. `echo "\$config_directories['sync'] = '../config/prod';" >> sites/default/settings.php`
-    3. `echo "\$settings['file_private_path'] = '../private_files';" >> sites/default/settings.php`
-    4. `echo "\$settings['file_public_path'] = 'sites/default/files';" >> sites/default/settings.php`
-    5. `echo "\$settings['install_profile'] = 'standard';" >> sites/default/settings.php`
-    6. `chmod 444 sites/default/settings.php`
-10. Rewrite some stuff and import configs:
-    1. `drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'`
-    2. `drush config-set "system.site" uuid "f1a9fa87-20c1-42f1-b5f3-d75013dac850" -y`
-    3. `drush cim -y sync`
-    4. `drush config-set "system.file" "path.temporary" "/tmp" -y`
-    5. `drush cr`
-11. Exit from docker console:
-`Ctrl + d` or type `exit`
-12. Visit your site at: [http://localhost:](http://localhost:8000/) [8000](http://localhost:8000/) , log in with user: admin , password: 123
+1. `./docker-start.sh` (or `docker-start.bat` on windows)
+2. Visit your site at: [http://localhost:](http://localhost:8000/) [8000](http://localhost:8000/) , log in with user: admin , password: 123
 
 ## Install TheIdeaProject on Windows
 
@@ -126,8 +92,8 @@ Create also a virtual host for it if your program didn't do that. (like: `TheIde
 After you finished: `cd web`
 5. Install site:  
 `drush si --site-name=TheIdeaProject --site-mail=TheIdeaProject@test.com --account-name=admin --account-pass=123 --db-url=mysql://username:password@localhost/TheIdeaProject standard`  
-**NOTE**: don't forget to change the DB's user, password etc. in this command if needed! 
-**NOTE 2**: If you use ADD you don't need to set the sql connection settings, because it's preset by ADD. 
+**NOTE**: don't forget to change the DB's user, password etc. in this command if needed!
+**NOTE 2**: If you use ADD you don't need to set the sql connection settings, because it's preset by ADD.
 6. Modify settings.php (add these lines):
     1. `$config_directories['sync'] = '../config/prod';`
     2. `$settings['file_private_path'] = '../private_files';`
