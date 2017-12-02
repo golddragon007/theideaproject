@@ -1,0 +1,28 @@
+uuid: b920265e-70df-4804-b353-5cc03f2c9034
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - the_idea_project
+  theme:
+    - blyatiful
+id: ideaactions
+theme: blyatiful
+region: content
+weight: 0
+provider: null
+plugin: the_idea_project_idea_actions
+settings:
+  id: the_idea_project_idea_actions
+  label: 'Idea Actions'
+  provider: the_idea_project
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      ideas: ideas
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

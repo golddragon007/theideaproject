@@ -7430,7 +7430,8 @@ p:last-child,
 .view-filters .form-actions button {
   margin: 0;
 }
-.content .field--label {
+.content .field--label,
+#block-ideaactions .field--label {
   font-size: 1.2em;
   margin: 0.5em 0 0.2em 0;
 }

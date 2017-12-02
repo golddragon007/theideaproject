@@ -11,7 +11,7 @@ _core:
 id: blyatiful_powered
 theme: blyatiful
 region: footer
-weight: -10
+weight: -8
 provider: null
 plugin: system_powered_by_block
 settings:
