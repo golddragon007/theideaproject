@@ -12,7 +12,6 @@ function the_idea_project_form_alter(&$form, FormStateInterface $form_state, $fo
     if (is_numeric($nid)) {
       $idea = Node::load($nid);
       if ($idea !== NULL) {
-        drupal_set_message(print_r($form['title']['widget'], TRUE));
         $form['field_project_idea']['widget'][0]['target_id']['#default_value'] = $idea;
       }
     }
