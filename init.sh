@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -f init ]; then
   composer install
   mkdir private_files web/sites/default/files
@@ -14,6 +15,7 @@ if [ ! -f init ]; then
   drush cim -y sync
   drush cim -y sync
   drush config-set -y "system.file" "path.temporary" "/tmp"
+  drush en -y the_idea_project
   drush cr
   echo 1 > ../init
 fi

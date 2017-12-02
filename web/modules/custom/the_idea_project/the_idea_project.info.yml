@@ -1,0 +1,6 @@
+name: TheIdeaProject module
+type: module
+description: 'Provides custom features for TheIdeaProject.'
+package: Custom
+version: 1.0
+core: 8.x

@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_form_alter().
+ */
+function the_idea_project_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'node_project_form') {
+    $nid = \Drupal::request()->query->get('idea');
+    if (is_numeric($nid)) {
+      $idea = Node::load($nid);
+      if ($idea !== NULL) {
+        drupal_set_message(print_r($form['title']['widget'], TRUE));
+        $form['field_project_idea']['widget'][0]['target_id']['#default_value'] = $idea;
+      }
+    }
+  }
+}
