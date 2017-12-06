@@ -13,6 +13,8 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'access user profiles'
   - 'create ideas content'
   - 'create project content'
   - 'delete own project content'
