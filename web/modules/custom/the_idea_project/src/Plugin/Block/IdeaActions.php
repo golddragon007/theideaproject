@@ -28,6 +28,7 @@ class IdeaActions extends BlockBase {
 <div class="field--label">I\'m interested</div>
 <div>
     <a href="/node/add/project?idea=' . $node->id() . '" class="btn btn-primary" role="button" aria-disabled="true">Create new project</a>
+    <a href="/ideas/' . $node->id() . '/projects" class="btn btn-default" role="button" aria-disabled="true">Show projects</a>
 </div>
 </div>',
     ];
