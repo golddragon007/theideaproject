@@ -20,6 +20,9 @@ class IdeaActions extends BlockBase {
    */
   public function build() {
     $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node === null) {
+      return [];
+    }
     return [
       '#markup' => '<div>
 <div class="field--label">I\'m interested</div>
